@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bistu.cme.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+              <MenuItem fx:id="open" mnemonicParsing="false" onAction="#onOpenClicked" text="打开" />
+                  <MenuItem fx:id="create" mnemonicParsing="false" onAction="#onCreateClicked" text="新建" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="编辑">
+            <items>
+                  <MenuItem fx:id="copy" mnemonicParsing="false" onAction="#onCopyClicked" text="拷贝" />
+              <MenuItem fx:id="paste" mnemonicParsing="false" onAction="#onPasteClicked" text="粘贴" />
+                  <MenuItem fx:id="undo" mnemonicParsing="false" onAction="#onUndoClicked" text="撤销" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" maxHeight="375.0" maxWidth="600.0" minHeight="375.0" minWidth="600.0" pannable="true" prefHeight="375.0" prefWidth="600.0" vvalue="1.0">
+         <content>
+            <GridPane fx:id="gridPane" maxWidth="600.0" minHeight="0.0" minWidth="600.0" prefWidth="600.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
